@@ -1,12 +1,13 @@
 # Regex Tester Web Application
 
-This is a simple web application built with Flask that allows users to input a test string and a regular expression (regex) and displays all the matches found, with the regex matches highlighted in the test string.
+This is a simple web application built with Flask that allows users to input a test string and a regular expression (regex) and displays all the matches found, with the regex matches highlighted in the test string.It also includes an email validation feature.
 
 ## Features
 
 - Input a test string and a regular expression.
 - Display all matches found in the test string.
 - Highlight regex matches in the test string.
+- Validate email addresses.
 
 ## Usage
 
