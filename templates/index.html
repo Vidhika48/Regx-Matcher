@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Regex Tester</h1>
+    <form action="/result" method="POST">
+        <label for="test_string">Test String:</label><br>
+        <textarea id="test_string" name="test_string" rows="4" cols="50" placeholder="Enter a test string"></textarea><br>
+        <label for="regex_pattern">Regular Expression:</label><br>
+        <input type="text" id="regex_pattern" name="regex_pattern" placeholder="Enter regular expression"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>E-mail Validator</h1>
+    <form action="/validate-email" method="POST">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Eg: abc@email.com"><br><br>
+        <input type="submit" value="Validate Email">
+    </form>
+
+    {% if result %}
+    <div style="text-align: center;">
+    <p style="font-size: 18px; font-weight: bold; color: {% if valid %}green {% else %}red{% endif %};">{{ result }}</p>
+    </div>
+    {% endif %} 
+
+</body>
+</html>
